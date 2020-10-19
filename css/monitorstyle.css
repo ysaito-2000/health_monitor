@@ -1,9 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
+  width: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
   overflow-anchor: none;
 }
+
 
 
 #stars {
@@ -62,6 +69,8 @@ footer {
   bottom: 0;
   left:0;
   right:0;
+  padding: 0;
+  margin: 0;
   text-align: center;
   color: rgb(154, 156, 173);
 }

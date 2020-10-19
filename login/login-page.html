@@ -10,22 +10,36 @@
 <body>
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <div id='stars'></div>
+
     <div id="login-portal">
         <h1>Login</h1>
-        <form action="">
-            <!--insert form here-->
-        </form>
+        
+        <div id="login-info">
+            <!-- fill information here -->
+            <form id="input-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Username" name="username">
+                <label for="password">Password:</label>
+                <input type="text" id="password" placeholder="Password" name="password">           </form>
+        </div>
+
+
+
+        <!-- Could be button, use js -->
+        <div id="button">
+            <div id="login-button button"><p>Login</p></div>
+            <div id="signup-button button"><p>Sign Up</p></div>
+        </div>
+
+        <div id="forgotpass"><a href="find-password.html">Forgot Password?</a></div>
+        <div id="landing-page-link"><a href="../index.html">Back</a></div>
     </div>
-
-
-
-
-
-
-
-
-	<footer>
-		<p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
-	</footer>
 </body>
+
+<footer>
+    <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
+</footer>
+
+<script src="../js/index.js"></script>
+
 </html>
