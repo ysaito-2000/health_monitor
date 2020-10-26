@@ -3,12 +3,10 @@
 		<head>
 			<meta charset="utf-8">
 			<title>My Health Monitor</title>
-			<script defer src="src/js/index.js" charset="utf-8"></script>
 			<link rel="stylesheet" href="css/monitorstyle.css">
 			<link rel="stylesheet" href="css/landing-page.css">
-		<style>
 			
-		</style>
+			<script defer src="js/login-page.js"></script>
 		</head>
 		<body>
 			<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -25,14 +23,26 @@
     					vitals measurements
 					</span>
 					<br>
-					<br>
-					<div id="buttons">
-						<a href="login/login-page.html" id="login-button">Login</a>
-					</div>  
+
+					<main id="main-holder">
+    
+						<div id="login-error-msg-holder">
+						  <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+						</div>
+						
+						<form id="login-form" autocomplete="off">
+						  <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+						  <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+						  <input type="submit" value="Login" id="login-form-submit">
+						  <a href="sign-up.html">Sign Up</a>
+						</form>
+					  
+					  </main>
 				</div>
+
+				<footer>
+					<p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
+				</footer>
 		</body>
-		
-		<footer>
-			<p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
-		</footer>
-	</html>
+
+</html>

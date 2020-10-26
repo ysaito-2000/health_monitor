@@ -1,0 +1,50 @@
+<!Doctype html>
+	<html lang="en" dir="ltr">
+		<head>
+			<meta charset="utf-8">
+			<title>My Health Monitor</title>
+			<link rel="stylesheet" href="css/monitorstyle.css">
+			<link rel="stylesheet" href="css/signup-page.css">
+			<script defer src="js/signup-page.js"></script>
+		</head>
+		<body>
+			<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+				<div id='stars'></div>
+				<div id='stars2'></div>
+				<div id='stars3'></div>
+
+				<div id='title'>
+					<span>
+					  Sign Up
+					</span>
+					<br>
+
+				  <main id="main-holder">
+  
+					  <div id="signup-error-msg-holder">
+						<p id="signup-error-msg">Invalid Input, Please Fill Out Correctly</p>
+					  </div>
+					  
+					  <form id="signup-form" autocomplete="off">
+						<input type="text" name="username" id="username-field" class="signup-form-field" placeholder="Username">
+						<input type="password" name="password" id="password-field" class="signup-form-field" placeholder="Password">
+						<input type="password" name="password2" id="password2-field" class="signup-form-field" placeholder="Retype Password">
+						<select name="password-question" id="question-select" class="signup-form-field">
+							<option value="country">What country were you born in?</option>
+							<option value="mother-name">What is your mother's name?</option>
+							<option value="father-name">What is your father's name?</option>
+							<option value="school">What was the name of your middle school?</option>
+						</select>
+						<input type="text" name="password-answer" id="answer-field" class="signup-form-field" placeholder="Answer">
+						<input type="submit" value="Sign Up" id="signup-form-submit">
+					  </form>
+					
+					</main>
+			  </div>
+
+				<footer>
+					<p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
+				</footer>
+		</body>
+
+</html>
