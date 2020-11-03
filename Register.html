@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<header>
+    <h1>Register</h1>
+</header>
+
+<body>
+    <form action="Create a new account">
+        <p>
+            <label for="username">New Username:
+                <input type="text" name="username" id="username" placeholder="new username" minlength="5" maxlength="10"
+                    required></label>
+        </p>
+        <p>
+            <label for="password">New Password:
+                <input type="password" name="password" id="password" placeholder="new password" required></label>
+        </p>
+        <p>
+            <label for="comfirm">Confirm Password:
+                <input type="password" name="confirm" id="confirm" placeholder="confirm password" required></label>
+        </p>
+        <p>
+            <label for="age">Age
+                <input type="number" name="age" id="age" min="18" max="100" required>
+            </label>
+        </p>
+        <p>
+            <label for="gender">Gender:
+                <label for="female">Female
+                    <input type="radio" name="gender" id="female" value="female" required>
+                </label>
+                <label for="male">male
+                    <input type="radio" name="gender" id="male" value="male">
+                </label>
+                <label for="rather">Rather not to say
+                    <input type="radio" name="gender" id="rather" value="RNTS">
+                </label>
+            </label>
+        </p>
+        <p>
+            <label for="weight">Weight:
+                <input type="number" name="weight" id="weight" min="0" max="1000"> lbs
+            </label>
+        </p>
+        <p>
+            <label for="hight">Height:
+                <input type="number" name="height" id="height" min="0" max="300"> cm
+            </label>
+        </p>
+        <button type="submit">Create new account</button>
+    </form>
+</body>
+<footer>
+    Copyright &#169; 2020 Group 4 - San Jose State University
+</footer>
+
+</html>
