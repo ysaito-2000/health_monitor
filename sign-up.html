@@ -29,6 +29,34 @@
 						<input type="text" name="username" id="username-field" class="signup-form-field" placeholder="Username">
 						<input type="password" name="password" id="password-field" class="signup-form-field" placeholder="Password">
 						<input type="password" name="password2" id="password2-field" class="signup-form-field" placeholder="Retype Password">
+
+						<div id="gender-field"> 
+							<label for="gender">Gender:  
+								<label for="female" id="gender-option">Female
+									<input type="radio" name="gender" id="female" value="female" class="gender-option">
+								</label>
+								<label for="male" id="gender-option">Male
+									<input type="radio" name="gender" id="male" value="male" class="gender-option">
+								</label>
+								<label for="rather" id="gender-option">Rather Not Say
+									<input type="radio" name="gender" id="rather" value="RNS" class="gender-option">
+								</label>
+							</label>
+						</div>
+
+						<div id="numerical-field">
+							<label for="age">Age
+								<input type="number" name="age" id="age" min="18" max="100" required>
+							</label>
+							<label for="weight">Weight:
+								<input type="number" name="weight" id="weight" min="0" max="1000"> lbs
+							</label>
+							<label for="hight">Height:
+								<input type="number" name="height" id="height" min="0" max="300"> cm
+							</label>
+						</div>
+
+
 						<select name="password-question" id="question-select" class="signup-form-field">
 							<option value="country">What country were you born in?</option>
 							<option value="mother-name">What is your mother's name?</option>
