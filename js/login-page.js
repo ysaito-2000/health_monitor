@@ -7,11 +7,27 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "user1" && password === "p@ssw0rd!") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
+    if (typeof localStorage.getItem("USERS") == undefined) {
         loginErrorMsg.style.opacity = 1;
+        return;
+    } else {
+        let totalUsers = JSON.parse(localStorage.getItem("USERS"));
+
+        let found = false;
+
+        for (key in totalUsers) {
+            if (totalUsers[key].username == username && totalUsers[key].password == password) {
+                console.log("success!");
+                found = true;
+                localStorage.setItem("CURRENTUSER", totalUsers[key].key);
+                window.location.href = "data-entry.html";
+            }
+        }
+
+        if (!found) {
+            loginErrorMsg.style.opacity = 1;
+        }
+
     }
 })
 

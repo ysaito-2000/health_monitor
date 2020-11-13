@@ -47,6 +47,7 @@ signupButton.addEventListener("click", (e) => {
     if (emptyField) {
         alert("You have left a field blank");
         location.reload();
+        return;
     }
 
 
@@ -59,5 +60,20 @@ signupButton.addEventListener("click", (e) => {
     if (userInfo.password != userInfo.password2) {
         alert("Passwords do not match");
         location.reload();
+        return;
     }
+
+    // Assume this is first user, will add more code to handle an already existing user base
+
+    let totalUsers = localStorage.getItem("USERS");
+
+    if (typeof variable == "undefined") {
+        totalUsers = [userInfo];
+        console.log(totalUsers);
+        localStorage.setItem("USERS", JSON.stringify(totalUsers));
+    } 
+
+    localStorage.setItem("CURRENTUSER", userInfo.key);
+
+    window.location.href = "data-entry.html";
 })
