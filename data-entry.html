@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Monitor | Data Entry</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Health Monitor | Data Entry</title>
 
-    <link rel="stylesheet" href="css/monitorstyle.css">
-    <link rel="stylesheet" href="css/dataEntry.css">
+        <link rel="stylesheet" href="css/monitorstyle.css">
+        <link rel="stylesheet" href="css/dataEntry.css">
+        <link rel="icon" href="https://www.shareicon.net/data/512x512/2016/07/04/791096_monitor_512x512.png">
     
-    <script defer src="js/dataEntry-page.js"></script>
-</head>
-<body>
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-				<div id='stars'></div>
-				<div id='stars2'></div>
-				<div id='stars3'></div>
+        <script defer src="js/dataEntry-page.js"></script>
+    </head>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+		    <div id='stars'></div>
+		    <div id='stars2'></div>
+		    <div id='stars3'></div>
 
+            <div id="data-body">
+                <h1>Data Entry</h1>
 
+                <form id="data-info" autocomplete="off">
+                    <label for="HR">Date:</label>
+                        <div id="day-options">
+                            <select id="date" name="date">
+                                <option value="sun">Sunday</option>
+                                <option value="mon">Monday</option>
+                                <option value="tues">Tuesday</option>
+                                <option value="wed">Wednesday</option>
+                                <option value="thurs">Thursday</option>
+                                <option value="fri">Friday</option>
+                                <option value="sat">Saturday</option>
+                            </select>
+                        </div>  <p></p>
 
-				<footer>
-					<p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
-				</footer>
-</body>
+                    <label for="HR">Heart Rate:</label>
+                        <input type="number" name="HR" id="HR" min="0" max="200" required>  <p>bpm</p>
+
+                    <label for="BP">Blood Pressure</label>
+                        <input type="number" name="BP" id="BP" min="0" max="200" required> <p>mmHg</p> 
+            
+                    <label for="Act">Hours of Activity</label>
+                        <input type="number" name="Act" id="Act" min="0" max="24" required> <p>hour(s)</p>  
+                
+                    <label for="In">Calories Intake</label>
+                        <input type="number" name="In" id="In" min="0"> <p>calories</p> 
+              
+                    <label for="Out">Calories Outtake</label>
+                        <input type="number" name="Out" id="Out" min="0"> <p>calories</p>  
+                    
+                    <p></p>
+                    <p></p>
+
+                    <button type="submit">Enter</button>
+                </form>
+
+            </div>
+
+		    <footer>
+			    <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
+		    </footer>
+    </body>
 </html>
