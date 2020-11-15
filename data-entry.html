@@ -23,7 +23,7 @@
                 <form id="data-info" autocomplete="off">
                     <label for="HR">Date:</label>
                         <div id="day-options">
-                            <select id="date" name="date">
+                            <select id="date" class="entry" name="date">
                                 <option value="sun">Sunday</option>
                                 <option value="mon">Monday</option>
                                 <option value="tues">Tuesday</option>
@@ -35,25 +35,29 @@
                         </div>  <p></p>
 
                     <label for="HR">Heart Rate:</label>
-                        <input type="number" name="HR" id="HR" min="0" max="200" required>  <p>bpm</p>
+                        <input type="number" name="HR" id="HR" class="entry">  <p>bpm</p>
 
                     <label for="BP">Blood Pressure</label>
-                        <input type="number" name="BP" id="BP" min="0" max="200" required> <p>mmHg</p> 
+                        <input type="number" name="BP" id="BP" class="entry"> <p>mmHg</p> 
             
                     <label for="Act">Hours of Activity</label>
-                        <input type="number" name="Act" id="Act" min="0" max="24" required> <p>hour(s)</p>  
+                        <input type="number" name="Act" id="Act" class="entry"> <p>hour(s)</p>  
                 
                     <label for="In">Calories Intake</label>
-                        <input type="number" name="In" id="In" min="0"> <p>calories</p> 
+                        <input type="number" name="In" id="In" class="entry"> <p>calories</p> 
               
                     <label for="Out">Calories Outtake</label>
-                        <input type="number" name="Out" id="Out" min="0"> <p>calories</p>  
+                        <input type="number" name="Out" id="Out" class="entry"> <p>calories</p>  
                     
                     <p></p>
                     <p></p>
 
-                    <button type="submit">Enter</button>
+                    <button id="submit-button">Enter</button>
                 </form>
+
+            </div>
+
+            <div class="">
 
             </div>
 

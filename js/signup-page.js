@@ -59,7 +59,6 @@ signupButton.addEventListener("click", (e) => {
 
     if (userInfo.password != userInfo.password2) {
         alert("Passwords do not match");
-        location.reload();
         return;
     }
 
@@ -67,7 +66,7 @@ signupButton.addEventListener("click", (e) => {
 
     let totalUsers = localStorage.getItem("USERS");
 
-    if (typeof variable == "undefined") {
+    if (totalUsers == null) {
         totalUsers = [userInfo];
         console.log(totalUsers);
         localStorage.setItem("USERS", JSON.stringify(totalUsers));

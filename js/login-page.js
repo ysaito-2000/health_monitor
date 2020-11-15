@@ -20,7 +20,7 @@ loginButton.addEventListener("click", (e) => {
                 console.log("success!");
                 found = true;
                 localStorage.setItem("CURRENTUSER", totalUsers[key].key);
-                window.location.href = "data-entry.html";
+                window.location.href = "summary.html";
             }
         }
 
