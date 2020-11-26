@@ -2,6 +2,10 @@ const dataForm = document.getElementsByClassName("entry");
 const submitButton = document.getElementById("submit-button");
 let currentUser = localStorage.getItem("CURRENTUSER");
 
+if (currentUser == "null") {
+    window.location.href = "signup-page.html";
+}
+
 submitButton.addEventListener("click", (e) => {
     e.preventDefault();
 
