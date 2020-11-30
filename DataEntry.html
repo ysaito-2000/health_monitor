@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="monitorstyle.css">
+    <link rel="stylesheet" href="DataEntry.css">
+    <script defer src="DataEntry.js"></script>
+</head>
+<header>
+    <nav>Menu</nav>
+</header>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div id='title'>
+        <span>
+            Data Entry
+        </span>
+    </div>
+    <main>
+        <form id="data-form" autocomplete="off">
+            <div>
+                <label for="HR">Heart Rate (bpm): </label>
+                <input type="number" name="HR" id="HR" class="numericField" min="40" max="100" required>
+            </div>
+
+            <div>
+                <label for="BP">Blood Pressure (mmHg) :</label>
+                <input type="number" name="BP" id="BP" class="numericField" min="90" max="150" required>
+            </div>
+            <div>
+                <label for="Act">Hours of Activity (hr):</label>
+                <input type="number" name="Act" id="Act" class="numericField" min="0" max="24" required>
+
+            </div>
+            <div>
+                <label for="In">Calories Intake (calories):</label>
+                <input type="number" name="In" id="In" class="numericField" min="1000" max="3000">
+
+            </div>
+            <div>
+                <label for="Out">Calories Outtake (calories): </label>
+                <input type="number" name="Out" id="Out" class="numericField" min="0" max="1000">
+            </div>
+
+            <input type="submit" value="Enter" id="data-submit" class="data-submit">
+        </form>
+        <!-- <img src="https://webstockreview.net/images/runner-clipart-vector-3.jpg" alt="running man"> -->
+        </div>
+    </main>
+</body>
+<footer>
+    <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
+</footer>
+
+</html>
