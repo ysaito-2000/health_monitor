@@ -1,5 +1,5 @@
-const dataForm = document.getElementsByClassName("entry");
-const submitButton = document.getElementById("submit-button");
+const dataForm = document.getElementsByClassName("numericField");
+const submitButton = document.getElementById("data-submit");
 let currentUser = localStorage.getItem("CURRENTUSER");
 
 if (currentUser == "null") {

@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Health Monitor | Data Entry</title>
 
-        <link rel="stylesheet" href="css/monitorstyle.css">
-        <link rel="stylesheet" href="css/dataEntry.css">
-        <link rel="icon" href="https://www.shareicon.net/data/512x512/2016/07/04/791096_monitor_512x512.png">
-    
-        <script defer src="js/dataEntry-page.js"></script>
-    </head>
-    <body>
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-		    <div id='stars'></div>
-		    <div id='stars2'></div>
-		    <div id='stars3'></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="css/monitorstyle.css">
+    <link rel="stylesheet" href="css/data-entry.css">
+    <link rel="icon" href="https://www.shareicon.net/data/512x512/2016/07/04/791096_monitor_512x512.png">
 
-            <div id="data-body">
-                <h1>Data Entry</h1>
+    <script defer src="js/data-entry.js"></script>
+</head>
+<header>
+    <nav>Menu</nav>
+</header>
 
-                <form id="data-info" autocomplete="off">
-                    <label for="HR">Date:</label>
-                        <div id="day-options">
-                            <select id="date" class="entry" name="date">
-                                <option value="sun">Sunday</option>
-                                <option value="mon">Monday</option>
-                                <option value="tues">Tuesday</option>
-                                <option value="wed">Wednesday</option>
-                                <option value="thurs">Thursday</option>
-                                <option value="fri">Friday</option>
-                                <option value="sat">Saturday</option>
-                            </select>
-                        </div>  <p></p>
-
-                    <label for="HR">Heart Rate:</label>
-                        <input type="number" name="HR" id="HR" class="entry">  <p>bpm</p>
-
-                    <label for="BP">Blood Pressure</label>
-                        <input type="number" name="BP" id="BP" class="entry"> <p>mmHg</p> 
-            
-                    <label for="Act">Hours of Activity</label>
-                        <input type="number" name="Act" id="Act" class="entry"> <p>hour(s)</p>  
-                
-                    <label for="In">Calories Intake</label>
-                        <input type="number" name="In" id="In" class="entry"> <p>calories</p> 
-              
-                    <label for="Out">Calories Outtake</label>
-                        <input type="number" name="Out" id="Out" class="entry"> <p>calories</p>  
-                    
-                    <p></p>
-                    <p></p>
-
-                    <button id="submit-button">Enter</button>
-                </form>
-
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div id='title'>
+        <span>
+            Data Entry
+        </span>
+    </div>
+    <main>
+        <form id="data-form" autocomplete="off">
+            <div class="entry-option">
+                <label for="Date">Date: </label>
+                <div id="day-options">
+                    <select id="date" class="numericField" name="date">
+                        <option value="sun">Sunday</option>
+                        <option value="mon">Monday</option>
+                        <option value="tues">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                        <option value="thurs">Thursday</option>
+                        <option value="fri">Friday</option>
+                        <option value="sat">Saturday</option>
+                    </select>
+                </div> 
             </div>
 
-            <div class="">
-
+            <div class="entry-option">
+                <label for="HR">Heart Rate (bpm): </label>
+                <input type="number" name="HR" id="HR" class="numericField" min="40" max="100" required>
             </div>
 
-		    <footer>
-			    <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
-		    </footer>
-    </body>
+            <div class="entry-option">
+                <label for="BP">Blood Pressure (mmHg) :</label>
+                <input type="number" name="BP" id="BP" class="numericField" min="90" max="150" required>
+            </div>
+            <div class="entry-option">
+                <label for="Act">Hours of Activity (hr):</label>
+                <input type="number" name="Act" id="Act" class="numericField" min="0" max="24" required>
+
+            </div>
+            <div class="entry-option">
+                <label for="In">Calories Intake (calories):</label>
+                <input type="number" name="In" id="In" class="numericField" min="1000" max="3000">
+
+            </div>
+            <div class="entry-option">
+                <label for="Out">Calories Outtake (calories): </label>
+                <input type="number" name="Out" id="Out" class="numericField" min="0" max="1000">
+            </div>
+
+            <input type="submit" value="Enter" id="data-submit" class="data-submit">
+        </form>
+        <!-- <img src="https://webstockreview.net/images/runner-clipart-vector-3.jpg" alt="running man"> -->
+        </div>
+    </main>
+</body>
+<footer>
+    <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
+</footer>
+
 </html>
