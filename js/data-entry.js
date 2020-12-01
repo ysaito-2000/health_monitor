@@ -13,7 +13,7 @@ submitButton.addEventListener("click", (e) => {
         if (dataForm[i].value == "") {
             alert("There is an empty field");
             return;
-        } 
+        }
     }
 
     let thisUserInfo = {
@@ -32,7 +32,7 @@ submitButton.addEventListener("click", (e) => {
         allUserInfo = [thisUserInfo];
         localStorage.setItem("DATASTORAGE", JSON.stringify(allUserInfo));
     } else {
-    
+
         for (i = 0; i < allUserInfo.length; i++) {
             if (allUserInfo[i].date == thisUserInfo.date) {
                 allUserInfo[i] = thisUserInfo;
@@ -43,5 +43,7 @@ submitButton.addEventListener("click", (e) => {
 
         allUserInfo[allUserInfo.length] = thisUserInfo;
         localStorage.setItem("DATASTORAGE", JSON.stringify(allUserInfo));
+
+        window.location.href = "summary.html"
     }
 })

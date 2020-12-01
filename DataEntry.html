@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Entry</title>
-    <link rel="stylesheet" href="css/monitorstyle.css">
-    <link rel="stylesheet" href="css/data-entry.css">
-    <link rel="icon" href="https://www.shareicon.net/data/512x512/2016/07/04/791096_monitor_512x512.png">
-
-    <script defer src="js/data-entry.js"></script>
+    <link rel="stylesheet" href="monitorstyle.css">
+    <link rel="stylesheet" href="DataEntry.css">
+    <script defer src="DataEntry.js"></script>
 </head>
 <header>
     <nav>Menu</nav>
@@ -27,42 +25,26 @@
     </div>
     <main>
         <form id="data-form" autocomplete="off">
-            <div class="entry-option">
-                <label for="Date">Date: </label>
-                <div id="day-options">
-                    <select id="date" class="numericField" name="date">
-                        <option value=" "></option>
-                        <option value="sun">Sunday</option>
-                        <option value="mon">Monday</option>
-                        <option value="tues">Tuesday</option>
-                        <option value="wed">Wednesday</option>
-                        <option value="thurs">Thursday</option>
-                        <option value="fri">Friday</option>
-                        <option value="sat">Saturday</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="entry-option">
+            <div>
                 <label for="HR">Heart Rate (bpm): </label>
                 <input type="number" name="HR" id="HR" class="numericField" min="40" max="100" required>
             </div>
 
-            <div class="entry-option">
+            <div>
                 <label for="BP">Blood Pressure (mmHg) :</label>
                 <input type="number" name="BP" id="BP" class="numericField" min="90" max="150" required>
             </div>
-            <div class="entry-option">
+            <div>
                 <label for="Act">Hours of Activity (hr):</label>
                 <input type="number" name="Act" id="Act" class="numericField" min="0" max="24" required>
 
             </div>
-            <div class="entry-option">
+            <div>
                 <label for="In">Calories Intake (calories):</label>
                 <input type="number" name="In" id="In" class="numericField" min="1000" max="3000">
 
             </div>
-            <div class="entry-option">
+            <div>
                 <label for="Out">Calories Outtake (calories): </label>
                 <input type="number" name="Out" id="Out" class="numericField" min="0" max="1000">
             </div>
@@ -76,13 +58,5 @@
 <footer>
     <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
 </footer>
-
-<button class="btn-toggle" onclick="myFunction()">Light/Dark Mode</button>
-<script>
-    function myFunction() {
-        var element = document.body;
-        element.classList.toggle("light-theme");
-    }
-</script>
 
 </html>

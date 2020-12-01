@@ -49,30 +49,10 @@
   margin-bottom: 10px;
  }
 
- label{
-   font-weight: normal;
-   float: left;
-
- }
- form input#BP{
-   margin-left: 24px;
- }
- form input#In{
-  margin-left: 20px;
- }
-
- form input#HR{
-   margin-left: 97px;
- }
-
- form input#Act{
-   margin-left: 59px;
- }
-
-
   #data-submit{
     display: block;
     width: 20%;
+    margin-top: 20px;
     padding: 7px;
     margin-right: auto;
     margin-left: auto;
