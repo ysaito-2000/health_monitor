@@ -1,3 +1,4 @@
+// check and get user key
 let userKey = localStorage.getItem("CURRENTUSER");
 if (userKey == "null") {
     window.location.href = "signup-page.html"
@@ -9,6 +10,8 @@ for (i = 0; i < allUsers.length; i++) {
         theUser = allUsers[i];
     }
 }
+
+//get user data from localStorage
 let allUserData = JSON.parse(localStorage.getItem("DATASTORAGE"));
 let thisUserData = [];
 for (i = 0; i < allUserData.length; i++) {
@@ -16,6 +19,8 @@ for (i = 0; i < allUserData.length; i++) {
         thisUserData.push(allUserData[i]);
     }
 }
+
+// store data in arrays
 let hrArray = [], bpArray = [], actArray = [], calInArray = [], calOutArray = [], dateArray = [];
 for (i = 0; i < thisUserData.length; i++) {
     dateArray.push(thisUserData[i].date);
@@ -25,6 +30,8 @@ for (i = 0; i < thisUserData.length; i++) {
     calInArray.push(parseInt(thisUserData[i].calIn));
     calOutArray.push(parseInt(thisUserData[i].calOut));
 }
+
+//display data base on the input date
 for (i = 0; i < dateArray.length; i++) {
     if (dateArray[i] === "sun") {
         document.getElementById("hr1").innerHTML = hrArray[i];
@@ -77,3 +84,29 @@ for (i = 0; i < dateArray.length; i++) {
     }
 }
 
+
+var table = document.getElementById("table-summary");
+
+//get max values from the table then color them
+let hrMax = hrArray.indexOf(Math.max(...hrArray));
+table.rows[1].cells[hrMax + 1].style.color = 'red';
+let bpMax = bpArray.indexOf(Math.max(...bpArray));
+table.rows[2].cells[bpMax + 1].style.color = 'red';
+let actMax = actArray.indexOf(Math.max(...actArray));
+table.rows[3].cells[actMax + 1].style.color = 'red';
+let inMax = calInArray.indexOf(Math.max(...calInArray));
+table.rows[4].cells[inMax + 1].style.color = 'red';
+let outMax = calOutArray.indexOf(Math.max(...calOutArray));
+table.rows[5].cells[outMax + 1].style.color = 'red';
+
+//get min values from the table then color them 
+let hrMin = hrArray.indexOf(Math.min(...hrArray));
+table.rows[1].cells[hrMin + 1].style.color = 'darkblue';
+let bpMin = bpArray.indexOf(Math.min(...bpArray));
+table.rows[2].cells[bpMin + 1].style.color = 'darkblue';
+let actMin = actArray.indexOf(Math.min(...actArray));
+table.rows[3].cells[actMin + 1].style.color = 'darkblue';
+let inMin = calInArray.indexOf(Math.min(...calInArray));
+table.rows[4].cells[inMin + 1].style.color = 'darkblue';
+let outMin = calOutArray.indexOf(Math.min(...calOutArray));
+table.rows[5].cells[outMin + 1].style.color = 'darkblue';
