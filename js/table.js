@@ -101,12 +101,12 @@ table.rows[5].cells[outMax + 1].style.color = 'red';
 
 //get min values from the table then color them 
 let hrMin = hrArray.indexOf(Math.min(...hrArray));
-table.rows[1].cells[hrMin + 1].style.color = 'darkblue';
+table.rows[1].cells[hrMin + 1].style.color = 'goldenrod';
 let bpMin = bpArray.indexOf(Math.min(...bpArray));
-table.rows[2].cells[bpMin + 1].style.color = 'darkblue';
+table.rows[2].cells[bpMin + 1].style.color = 'goldenrod';
 let actMin = actArray.indexOf(Math.min(...actArray));
-table.rows[3].cells[actMin + 1].style.color = 'darkblue';
+table.rows[3].cells[actMin + 1].style.color = 'goldenrod';
 let inMin = calInArray.indexOf(Math.min(...calInArray));
-table.rows[4].cells[inMin + 1].style.color = 'darkblue';
+table.rows[4].cells[inMin + 1].style.color = 'goldenrod';
 let outMin = calOutArray.indexOf(Math.min(...calOutArray));
-table.rows[5].cells[outMin + 1].style.color = 'darkblue';
+table.rows[5].cells[outMin + 1].style.color = 'goldenrod';
