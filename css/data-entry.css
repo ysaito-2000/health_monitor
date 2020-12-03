@@ -1,6 +1,6 @@
 #title {
     position: relative;
-    top: 35%;
+    top: 1%; /*this adjusts the position of the title*/
     left: 0;
     right: 0;
     color: #FFF;
