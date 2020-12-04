@@ -3,7 +3,7 @@ const submitButton = document.getElementById("data-submit");
 let currentUser = localStorage.getItem("CURRENTUSER");
 
 if (currentUser == "null") {
-    window.location.href = "signup-page.html";
+    window.location.href = "index.html";
 }
 
 submitButton.addEventListener("click", (e) => {
