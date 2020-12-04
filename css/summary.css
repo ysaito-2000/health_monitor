@@ -6,14 +6,14 @@
     position: fixed;
     top: 50%;
     left: 50%;
-  
+
     transform: translate(-50%, -50%);
 
     width: 80%;
     height: 60%;
 
     display: grid;
-    
+
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4em;
 }
@@ -31,19 +31,23 @@
     margin-top: 15px;
 }
 
-table{
+table {
     margin-top: 50px;
     text-align: left;
 
     font-size: 35px;
 }
 
-table th{
+table th {
     padding-top: 25px;
     padding-left: 40px;
 }
 
-table td{
+table td {
     padding-top: 25px;
     padding-right: 20px;
+}
+
+.btn-toggle {
+    color: black;
 }

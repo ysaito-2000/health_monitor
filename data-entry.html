@@ -10,6 +10,7 @@
     <link rel="icon" href="https://www.shareicon.net/data/512x512/2016/07/04/791096_monitor_512x512.png">
 
     <script defer src="js/data-entry.js"></script>
+    <script src="js/accessory.js"></script>
 </head>
 <header>
     <nav>Menu</nav>
@@ -17,9 +18,26 @@
 
 <body>
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <div id='stars'></div>
+    <!-- <div id='stars'></div> -->
     <div id='stars2'></div>
-    <div id='stars3'></div>
+    <!-- <div id='stars3'></div> -->
+
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSideMenu()">
+                <img src="img/menu-icon2.png">
+            </a>
+        </span>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+        <a href="#">Login</a>
+        <a href="#">Data Entry</a>
+        <a href="#" id="current-page">Summary</a>
+        <a href="#">Table</a>
+    </div>
+
     <div id='title'>
         <span>
             Data Entry
@@ -72,17 +90,12 @@
         <!-- <img src="https://webstockreview.net/images/runner-clipart-vector-3.jpg" alt="running man"> -->
         </div>
     </main>
-</body>
-<footer>
-    <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
-</footer>
 
-<button class="btn-toggle" onclick="myFunction()">Light/Dark Mode</button>
-<script>
-    function myFunction() {
-        var element = document.body;
-        element.classList.toggle("light-theme");
-    }
-</script>
+    <button class="btn-toggle" onclick="myFunction()">Light/Dark Mode</button>
+
+    <footer>
+        <p>Copyright &#169; 2020 Group 4 - San Jose State University</p>
+    </footer>
+</body>
 
 </html>

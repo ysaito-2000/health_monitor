@@ -1,2 +1,2 @@
 # health_monitor
-Web browser-based health monitor system.
+Static browser-based health monitor system.

@@ -30,7 +30,7 @@ signupButton.addEventListener("click", (e) => {
         question: document.getElementById("question-select").value,
         answer: document.getElementById("answer-field").value,
 
-        key: "KEYONE"
+        key: "KEY"
     }
 
     // Checks if any of the fields are blank
@@ -64,15 +64,19 @@ signupButton.addEventListener("click", (e) => {
 
     // Assume this is first user, will add more code to handle an already existing user base
 
-    let totalUsers = localStorage.getItem("USERS");
+    let totalUsers = JSON.parse(localStorage.getItem("USERS"));
 
-    if (totalUsers == null) {
-        totalUsers = [userInfo];
-        console.log(totalUsers);
-        localStorage.setItem("USERS", JSON.stringify(totalUsers));
-    } 
+    if (totalUsers == null || totalUsers == undefined) {
+        totalUsers = [];
+    }
+
+    userInfo.key = userInfo.key + (totalUsers.length + 1);
+    totalUsers.push(userInfo);
+
+    localStorage.setItem("USERS", JSON.stringify(totalUsers));
+
 
     localStorage.setItem("CURRENTUSER", userInfo.key);
 
-    window.location.href = "data-entry.html";
+    window.location.href = "summary.html";
 })
