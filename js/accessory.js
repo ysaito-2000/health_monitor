@@ -19,7 +19,7 @@ function myFunction() {
     document.body.classList.add("light-theme");
   }
 
-  let theme = "dark";
+  var theme = "dark";
 
   if (document.body.classList.contains("light-theme")) {
     theme = "light";
