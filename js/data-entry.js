@@ -49,7 +49,7 @@ submitButton.addEventListener("click", (e) => {
     } else {
 
         for (i = 0; i < allUserInfo.length; i++) {
-            if (allUserInfo[i].date == thisUserInfo.date) {
+            if (allUserInfo[i].date == thisUserInfo.date && allUserInfo[i].key == thisUserInfo.key) {
                 allUserInfo[i] = thisUserInfo;
                 localStorage.setItem("DATASTORAGE", JSON.stringify(allUserInfo));
                 return;
