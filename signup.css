@@ -1,0 +1,136 @@
+#title {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
+#title span {
+  background: white;
+  /*-webkit-linear-gradient(white, #38495a);*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* this is for the light theme
+body {
+  height: 100%;
+  background-color: lightskyblue;
+}*/
+
+#signup-error-msg-holder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#signup-error-msg {
+  width: 23%;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8a0000;
+  border: 1px solid #8a0000;
+  background-color: #e58f8f;
+  opacity: 0;
+}
+
+#error-msg-second-line {
+  display: block;
+}
+
+#signup-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.signup-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.signup-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  outline: none;
+  width: 25%;
+  padding: 0px 0px 5px 5px;
+}
+
+#signup-form select {
+  margin: 0px 0px 8px 0px;
+}
+
+#signup-form input[type=text],
+#signup-form input[type=password] {
+  border: 2px solid #aaa;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+#signup-form input:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+#signup-form input[type=submit]:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+#signup-form-submit {
+  width: 5%;
+  padding: 7px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #313131;
+  cursor: pointer;
+  outline: none;
+}
+
+#username-field,
+#password-field,
+#password2-field {
+  width: 15%;
+}
+
+#gender-field,
+#numerical-field {
+  width: 30%;
+  letter-spacing: normal;
+  font-size: .3em;
+  margin-bottom: .8em;
+}
+
+#gender-field label {
+  margin-left: 1em;
+}
+
+#numerical-field label {
+  margin-left: 1em;
+}
+
+@media all (max-width: 1000px) {
+body {link rel="stylesheet" href="/styles/mobile.css" media="handheld" />
+}
+}
