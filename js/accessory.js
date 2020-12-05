@@ -1,8 +1,8 @@
 const btn = document.querySelector(".btn-toggle");
-const currentTheme = localStorage.getItem("theme");
+let currentTheme = localStorage.getItem("theme");
 
 if (currentTheme == null) {
-  localStorage.setItem("theme", "light");
+  localStorage.setItem("theme", "dark");
 }
 
 if (currentTheme == "light") {
@@ -14,6 +14,8 @@ if (currentTheme == "light") {
 function myFunction() {
   var element = document.body;
   element.classList.toggle("light-theme");
+
+  currentTheme = localStorage.getItem("theme");
 
   if (currentTheme == "dark") {
     document.body.classList.add("light-theme");
