@@ -46,7 +46,6 @@ signupButton.addEventListener("click", (e) => {
 
     if (emptyField) {
         alert("You have left a field blank");
-        location.reload();
         return;
     }
     // Form validation

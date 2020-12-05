@@ -151,7 +151,7 @@ var updateAll = (e => {
         } else if (slopes[i] < 0) {
             weeklyTrend[i].innerHTML = "<img src='img/downarrow.png' style='width:42px;height:42px;'>";
         } else {
-            weeklyTrend[i].innerHTML = "<img src='img/even.png' style='width:42px;height:42px;'>";
+            weeklyTrend[i].innerHTML = "<img src='img/rightarrow.png' style='width:42px;height:42px;'>";
         }
     }
 
