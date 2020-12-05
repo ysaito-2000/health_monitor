@@ -49,7 +49,15 @@ signupButton.addEventListener("click", (e) => {
         location.reload();
         return;
     }
-
+    // Form validation
+    if (userInfo.username.length < 5 || userInfo.username.length > 50) {
+        alert("Username cannot be less than 5 or greater than 50 characters");
+        return;
+    }
+    if (userInfo.password.length < 7 || userInfo.password.length > 25) {
+        alert("Password cannot be less than 7 or greater than 25 characters");
+        return;
+    }
 
     // Checks if the passwords match
 
