@@ -2,7 +2,7 @@ const btn = document.querySelector(".btn-toggle");
 const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme == null) {
-  localStorage.setItem("theme", "dark");
+  localStorage.setItem("theme", theme);
 }
 
 if (currentTheme == "light") {
