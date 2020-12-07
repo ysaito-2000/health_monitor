@@ -108,10 +108,11 @@ for (i = 0; i < dateArray.length; i++) {
         document.getElementById("calOut7").innerHTML = calOutArray[i];
     }
 }
-//store the values of blood pressure in type of integer 
+//store the values of blood pressure in type of integer for the comparision
 let bpInt = [];
 for (i = 0; i < bpArray.length; i++) {
-    bpInt[i] = (parseInt(bpArray[i].substring(0, 3)) + parseInt(bpArray[i].substring(4)));
+    var vals = bpArray[i].split("/");
+    bpInt[i] = (parseInt(vals[0] + parseInt(vals[1])));
 }
 
 var table = document.getElementById("table-summary");
