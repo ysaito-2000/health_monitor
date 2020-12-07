@@ -50,7 +50,7 @@ let hrArray = [],
 for (i = 0; i < thisUserData.length; i++) {
     dateArray.push(thisUserData[i].date);
     hrArray.push(parseInt(thisUserData[i].hr));
-    bpArray.push(parseInt(thisUserData[i].bp));
+    bpArray.push(thisUserData[i].bp);
     actArray.push(parseInt(thisUserData[i].act));
     calInArray.push(parseInt(thisUserData[i].calIn));
     calOutArray.push(parseInt(thisUserData[i].calOut));
@@ -108,14 +108,18 @@ for (i = 0; i < dateArray.length; i++) {
         document.getElementById("calOut7").innerHTML = calOutArray[i];
     }
 }
-
+//store the values of blood pressure in form of integer 
+let bpInt = [];
+for (i = 0; i < bpArray.length; i++) {
+    bpInt[i] = (parseInt(bpArray[i].substring(0, 3)) + parseInt(bpArray[i].substring(4)));
+}
 
 var table = document.getElementById("table-summary");
 
 //get min values from the table then color them 
 let hrMin = hrArray.indexOf(Math.min(...hrArray));
 table.rows[1].cells[hrMin + 1].style.color = 'goldenrod';
-let bpMin = bpArray.indexOf(Math.min(...bpArray));
+let bpMin = bpInt.indexOf(Math.min(...bpInt));
 table.rows[2].cells[bpMin + 1].style.color = 'goldenrod';
 let actMin = actArray.indexOf(Math.min(...actArray));
 table.rows[3].cells[actMin + 1].style.color = 'goldenrod';
@@ -127,7 +131,7 @@ table.rows[5].cells[outMin + 1].style.color = 'goldenrod';
 //get max values from the table then color them
 let hrMax = hrArray.indexOf(Math.max(...hrArray));
 table.rows[1].cells[hrMax + 1].style.color = 'red';
-let bpMax = bpArray.indexOf(Math.max(...bpArray));
+let bpMax = bpInt.indexOf(Math.max(...bpInt));
 table.rows[2].cells[bpMax + 1].style.color = 'red';
 let actMax = actArray.indexOf(Math.max(...actArray));
 table.rows[3].cells[actMax + 1].style.color = 'red';
