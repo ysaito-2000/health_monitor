@@ -33,9 +33,14 @@ submitButton.addEventListener("click", (e) => {
     let combinedBp = "";
 
     let bpInfo = document.getElementsByClassName("BP");
+
+    if ((bpInfo[0].value > 180) || (bpInfo[0].value < 80) || (bpInfo[1].value < 60) || (bpInfo[1].value > 120)) {
+        alert("Entered unrealistic blood pressure. If information was accurate, please contact a doctor immediately.");
+        return;
+    }
+
     combinedBp = bpInfo[0].value + "/" + bpInfo[1].value;
 
-    console.log(combinedBp);
 
     let thisUserInfo = {
         key: currentUser,

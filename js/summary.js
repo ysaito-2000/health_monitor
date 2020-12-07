@@ -96,7 +96,8 @@ var updateAll = (e => {
 
     let xArray = [],
         hrArray = [],
-        bpArray = [],
+        bpSArray = [],
+        bpDArray = [],
         actArray = [],
         calInArray = [],
         calOutArray = [];
@@ -104,14 +105,21 @@ var updateAll = (e => {
     for (i = 0; i < thisUserData.length; i++) {
         xArray.push(i);
         hrArray.push(parseInt(thisUserData[i].hr));
-        bpArray.push(parseInt(thisUserData[i].bp));
+
+        let str = (thisUserData[i].bp).split("/")
+
+        bpSArray.push(parseInt(str[0]));
+        bpDArray.push(parseInt(str[1]));
         actArray.push(parseInt(thisUserData[i].act));
         calInArray.push(parseInt(thisUserData[i].calIn));
         calOutArray.push(parseInt(thisUserData[i].calOut));
     }
 
+    console.log(bpSArray);
+
     let slopes = [linearRegression(hrArray, xArray),
-        linearRegression(bpArray, xArray),
+        linearRegression(bpSArray, xArray),
+        linearRegression(bpDArray, xArray),
         linearRegression(actArray, xArray),
         linearRegression(calInArray, xArray),
         linearRegression(calOutArray, xArray)
