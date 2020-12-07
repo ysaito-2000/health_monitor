@@ -108,7 +108,7 @@ for (i = 0; i < dateArray.length; i++) {
         document.getElementById("calOut7").innerHTML = calOutArray[i];
     }
 }
-//store the values of blood pressure in form of integer 
+//store the values of blood pressure in type of integer 
 let bpInt = [];
 for (i = 0; i < bpArray.length; i++) {
     bpInt[i] = (parseInt(bpArray[i].substring(0, 3)) + parseInt(bpArray[i].substring(4)));
