@@ -30,6 +30,8 @@ submitButton.addEventListener("click", (e) => {
         return weekNo;
     }
 
+
+    // set accepted max - min value for data entry.
     let combinedBp = "";
 
     let bpInfo = document.getElementsByClassName("BP");
@@ -41,7 +43,31 @@ submitButton.addEventListener("click", (e) => {
 
     combinedBp = bpInfo[0].value + "/" + bpInfo[1].value;
 
+    let hrInfo = document.getElementById("HR").value;
+    if ((hrInfo < 40) || (hrInfo > 150)) {
+        alert("Entered unrealistic heart rate. If information was accurate, please contact a doctor immediately.");
+        return;
+    }
 
+    let actInfo = document.getElementById("Act").value;
+    if ((actInfo < 0) || (actInfo > 24)) {
+        alert("Activity hour should be from 0 - 24.");
+        return;
+    }
+
+    let calInInfo = document.getElementById("In").value;
+    if ((calInInfo < 0 || calInInfo > 5000)) {
+        alert("Entered unrealistic calories intake. If information was accurate, please contact a doctor immediately.");
+        return;
+    }
+
+    let calOutInfo = document.getElementById("Out").value;
+    if ((calOutInfo < 0 || calOutInfo > 5000)) {
+        alert("Entered unrealistic calories outtake. If information was accurate, please contact a doctor immediately.");
+        return;
+    }
+
+    // collect and store data
     let thisUserInfo = {
         key: currentUser,
         week: getWeekNumber(new Date()),
@@ -59,7 +85,6 @@ submitButton.addEventListener("click", (e) => {
         allUserInfo = [thisUserInfo];
         localStorage.setItem("DATASTORAGE", JSON.stringify(allUserInfo));
     } else {
-
         for (i = 0; i < allUserInfo.length; i++) {
             if (allUserInfo[i].date == thisUserInfo.date && allUserInfo[i].key == thisUserInfo.key) {
                 allUserInfo[i] = thisUserInfo;
