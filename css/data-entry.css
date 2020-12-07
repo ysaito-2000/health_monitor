@@ -26,7 +26,7 @@ main {
   font-family: "lato", sans-serif;
   font-size: 25px;
   color: #FFF;
-  width: 500px;
+  width: 600px;
   margin: 3%;
   margin-left: auto;
   margin-right: auto;
@@ -72,4 +72,12 @@ main {
 
 .heading {
   margin-top: 10px;
+}
+
+#BP {
+  width: 42%;
+}
+
+#date {
+  width:139px;
 }

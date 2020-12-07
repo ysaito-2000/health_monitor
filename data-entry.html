@@ -63,8 +63,11 @@
             </div>
 
             <div class="entry-option">
-                <label for="BP">Blood Pressure (Sys/80 mmHg):</label>
-                <input type="number" name="BP" id="BP" class="numericField" min="90" max="150" required>
+                <label for="BP">Blood Pressure (Sys/Dia):</label>
+                <div>
+                    <input type="number" name="BP" id="BP" class="numericField BP" min="90" max="180" required>
+                    <input type="number" name="BP" id="BP" class="numericField BP" min="60" max="120" required>
+                </div>
             </div>
             <div class="entry-option">
                 <label for="Act">Hours of Activity (hr):</label>

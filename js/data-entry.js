@@ -30,12 +30,19 @@ submitButton.addEventListener("click", (e) => {
         return weekNo;
     }
 
+    let combinedBp = "";
+
+    let bpInfo = document.getElementsByClassName("BP");
+    combinedBp = bpInfo[0].value + "/" + bpInfo[1].value;
+
+    console.log(combinedBp);
+
     let thisUserInfo = {
         key: currentUser,
         week: getWeekNumber(new Date()),
         date: document.getElementById("date").value,
         hr: document.getElementById("HR").value,
-        bp: document.getElementById("BP").value,
+        bp: combinedBp,
         act: document.getElementById("Act").value,
         calIn: document.getElementById("In").value,
         calOut: document.getElementById("Out").value
