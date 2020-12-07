@@ -112,18 +112,6 @@ for (i = 0; i < dateArray.length; i++) {
 
 var table = document.getElementById("table-summary");
 
-//get max values from the table then color them
-let hrMax = hrArray.indexOf(Math.max(...hrArray));
-table.rows[1].cells[hrMax + 1].style.color = 'red';
-let bpMax = bpArray.indexOf(Math.max(...bpArray));
-table.rows[2].cells[bpMax + 1].style.color = 'red';
-let actMax = actArray.indexOf(Math.max(...actArray));
-table.rows[3].cells[actMax + 1].style.color = 'red';
-let inMax = calInArray.indexOf(Math.max(...calInArray));
-table.rows[4].cells[inMax + 1].style.color = 'red';
-let outMax = calOutArray.indexOf(Math.max(...calOutArray));
-table.rows[5].cells[outMax + 1].style.color = 'red';
-
 //get min values from the table then color them 
 let hrMin = hrArray.indexOf(Math.min(...hrArray));
 table.rows[1].cells[hrMin + 1].style.color = 'goldenrod';
@@ -135,3 +123,15 @@ let inMin = calInArray.indexOf(Math.min(...calInArray));
 table.rows[4].cells[inMin + 1].style.color = 'goldenrod';
 let outMin = calOutArray.indexOf(Math.min(...calOutArray));
 table.rows[5].cells[outMin + 1].style.color = 'goldenrod';
+
+//get max values from the table then color them
+let hrMax = hrArray.indexOf(Math.max(...hrArray));
+table.rows[1].cells[hrMax + 1].style.color = 'red';
+let bpMax = bpArray.indexOf(Math.max(...bpArray));
+table.rows[2].cells[bpMax + 1].style.color = 'red';
+let actMax = actArray.indexOf(Math.max(...actArray));
+table.rows[3].cells[actMax + 1].style.color = 'red';
+let inMax = calInArray.indexOf(Math.max(...calInArray));
+table.rows[4].cells[inMax + 1].style.color = 'red';
+let outMax = calOutArray.indexOf(Math.max(...calOutArray));
+table.rows[5].cells[outMax + 1].style.color = 'red';
